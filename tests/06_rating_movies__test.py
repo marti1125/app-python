@@ -8,6 +8,7 @@ user = '1185150b-9e81-46a2-a1d3-eb649544b9c4'
 email = 'graphacademy.reviewer@neo4j.com'
 rating = 5
 
+
 @pytest.fixture(autouse=True)
 def before_all(app):
     with app.app_context():

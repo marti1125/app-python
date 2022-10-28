@@ -10,6 +10,7 @@ email = str(random.randint(1, 10000)) + "@neo4j.com"
 password = "letmein"
 name = "Random User"
 
+
 @pytest.fixture(autouse=True)
 def before_all(app):
     with app.app_context():

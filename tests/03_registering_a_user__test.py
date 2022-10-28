@@ -10,6 +10,7 @@ email = "graphacademy@neo4j.com"
 password = "letmein"
 name = "Graph Academy"
 
+
 @pytest.fixture(autouse=True)
 def before_all(app):
     with app.app_context():

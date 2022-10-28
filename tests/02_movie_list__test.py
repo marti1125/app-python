@@ -3,6 +3,7 @@ import pytest
 from api.neo4j import close_driver, get_driver
 from api.dao.movies import MovieDAO
 
+
 def test_pagination(app):
     """Test that the all method on the MovieDAO is correctly implemented"""
     with app.app_context():
