@@ -6,6 +6,7 @@ from api.dao.ratings import RatingDAO
 
 movie_routes = Blueprint("movies", __name__, url_prefix="/api/movies")
 
+
 # tag::list[]
 @movie_routes.get('/')
 @jwt_required(optional=True)
@@ -27,6 +28,8 @@ def get_movies():
 
     # Return as JSON
     return jsonify(output)
+
+
 # end::list[]
 
 
@@ -79,4 +82,3 @@ def get_similar_movies(movie_id):
     output = dao.get_similar_movies(movie_id, limit, skip, user_id)
 
     return jsonify(output)
-
